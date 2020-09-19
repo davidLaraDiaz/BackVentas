@@ -20,7 +20,7 @@ public class DetalleVenta implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "idDetalleVenta")
-	private int idDetalle;
+	private Long idDetalle;
 	
 	@Column(name = "idVenta")
 	@ManyToOne
@@ -40,15 +40,25 @@ public class DetalleVenta implements Serializable{
 
 
 
-	public int getIdDetalle() {
+
+
+	public Long getIdDetalle() {
 		return idDetalle;
 	}
 
 
 
-	public void setIdDetalle(int idDetalle) {
+
+
+
+
+	public void setIdDetalle(Long idDetalle) {
 		this.idDetalle = idDetalle;
 	}
+
+
+
+
 
 
 

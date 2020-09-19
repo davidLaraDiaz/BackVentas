@@ -17,7 +17,7 @@ public interface IProductoImplements {
 	
 	public Producto findById(Long id);
 	
-	public Producto save(Producto Producto);
+	public Producto save(Producto producto);
 	
 	public void delete(Long id);
 	

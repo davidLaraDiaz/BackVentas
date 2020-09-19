@@ -26,7 +26,7 @@ public class Venta implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "idVenta")
-	private int idVenta;
+	private Long idVenta;
 	
 	@Column(name = "idCliente")
 	@ManyToOne
@@ -45,15 +45,18 @@ public class Venta implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
+	
 
-	public int getIdVenta() {
+	public Long getIdVenta() {
 		return idVenta;
 	}
 
 
-	public void setIdVenta(int idVenta) {
+
+	public void setIdVenta(Long idVenta) {
 		this.idVenta = idVenta;
 	}
+
 
 
 	public Cliente getIdCliente() {
