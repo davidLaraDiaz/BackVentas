@@ -34,11 +34,10 @@ public class Venta implements Serializable{
 	private Cliente idCliente;
 	
 	@Column(name = "fecha")
-	@Temporal(TemporalType.DATE)
 	private Date fecha;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idVenta")
-	private List<DetalleVenta> detalles;
+	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "idVenta")
+	//private List<DetalleVenta> detalles;
 	
 	
 	public Venta() {
@@ -79,14 +78,7 @@ public class Venta implements Serializable{
 	}
 
 
-	public List<DetalleVenta> getDetalles() {
-		return detalles;
-	}
 
-
-	public void setDetalles(List<DetalleVenta> detalles) {
-		this.detalles = detalles;
-	}
 
 
 	

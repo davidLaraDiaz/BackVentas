@@ -13,38 +13,38 @@ import com.prueba.model.Producto;
 @Service
 public class ProductoService implements IProductoImplements {
 
-	//@Autowired
-	//private IProductoDAO data;
+	@Autowired
+	private IProductoDAO data;
 	
 	@Override
 	public List<Producto> findAll() {
 		// TODO Auto-generated method stub
-		//return data.findAll();
-		return null;
+		return data.findAll();
+
 	}
 
 	@Override
 	public Page<Producto> findAll(Pageable pageable) {
 		// TODO Auto-generated method stub
-		return null;//data.findAll(pageable);
+		return data.findAll(pageable);
 	}
 
 	@Override
 	public Producto findById(Long id) {
 		// TODO Auto-generated method stub
-		return null;//data.findById(id).orElse(null);
+		return data.findById(id).orElse(null);
 	}
 
 	@Override
 	public Producto save(Producto producto) {
 		// TODO Auto-generated method stub
-		return null;//data.save(producto);
+		return data.save(producto);
 	}
 
 	@Override
 	public void delete(Long id) {
 		// TODO Auto-generated method stub
-		//data.deleteById(id);
+		data.deleteById(id);
 	}
 
 }
