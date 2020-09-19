@@ -37,8 +37,8 @@ public class Cliente implements Serializable{
 	@Column(name = "email")
 	private String email;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
-	private List<Venta> ventas;
+	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "idCliente")
+	//private List<Venta> ventas;
 	
 	
 	public Cliente() {
@@ -112,14 +112,6 @@ public class Cliente implements Serializable{
 	}
 
 
-	public List<Venta> getVentas() {
-		return ventas;
-	}
-
-
-	public void setVentas(List<Venta> ventas) {
-		this.ventas = ventas;
-	}
 	
 	
 	

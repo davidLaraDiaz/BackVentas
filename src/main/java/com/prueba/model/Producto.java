@@ -12,8 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "producto")
+//@Entity
+//@Table(name = "producto")
 public class Producto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -86,6 +86,7 @@ public class Producto implements Serializable{
 		this.detalles = detalles;
 	}
 
+	
 	
 	
 }

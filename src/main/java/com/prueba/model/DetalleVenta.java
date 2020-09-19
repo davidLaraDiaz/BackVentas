@@ -11,15 +11,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "detalle_venta")
+//@Entity
+//@Table(name = "detalleventa")
 public class DetalleVenta implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "idDetalleVenta")
+	@Column(name = "idDetalle")
 	private Long idDetalle;
 	
 	@Column(name = "idVenta")
@@ -30,7 +30,7 @@ public class DetalleVenta implements Serializable{
 	@Column(name = "idProducto")
 	@ManyToOne
     @JoinColumn(name = "idProducto")
-	private int idProducto;
+	private Producto idProducto;
 	
 	
 	
@@ -74,15 +74,21 @@ public class DetalleVenta implements Serializable{
 
 
 
-	public int getIdProducto() {
+
+
+	public Producto getIdProducto() {
 		return idProducto;
 	}
 
 
 
-	public void setIdProducto(int idProducto) {
+
+
+	public void setIdProducto(Producto idProducto) {
 		this.idProducto = idProducto;
 	}
+
+
 
 
 	
