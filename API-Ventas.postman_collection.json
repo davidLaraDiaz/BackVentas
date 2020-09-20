@@ -1,0 +1,405 @@
+{
+	"id": "bb08c62b-1fdb-43df-8e53-0bdbfeeab013",
+	"name": "API-Ventas",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"9e3eb397-402f-47e6-8178-e3597546a460",
+		"5bf5823c-de48-4a5f-a126-909c97611208"
+	],
+	"folders_order": [
+		"94ada800-3370-484a-8326-6eea672a5be9",
+		"18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+		"be3e6e6d-ad7f-40bc-8f28-a106165a8201",
+		"e41ecfd3-d2d5-4169-933b-876a6bf6fbc2"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "94ada800-3370-484a-8326-6eea672a5be9",
+			"name": "Cliente",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "bb08c62b-1fdb-43df-8e53-0bdbfeeab013",
+			"folder": null,
+			"order": [
+				"e6d7efca-8295-40ad-a8ca-b426a1c94308",
+				"ea04a93f-c97f-4dfd-90d5-692bc4ee1207"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "e41ecfd3-d2d5-4169-933b-876a6bf6fbc2",
+			"name": "DetalleVenta",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "bb08c62b-1fdb-43df-8e53-0bdbfeeab013",
+			"folder": null,
+			"order": [
+				"4285b243-adff-4db4-ac59-389d515c7fef",
+				"0563c6aa-3076-4ba8-bd78-d544e44f6154",
+				"923cb823-a550-4812-8cc0-ee335cb49165"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+			"name": "Producto",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "bb08c62b-1fdb-43df-8e53-0bdbfeeab013",
+			"folder": null,
+			"order": [
+				"53a9cea5-5548-41a1-b85c-3bf933f6c0d1",
+				"0438d941-636b-4600-8009-edde4865b5bb",
+				"66817ac6-22df-4394-9e9f-0b11abe0129b",
+				"c2c1dfcc-7fc9-46d7-832c-f1eaf93aa7ca",
+				"7f41fe2c-16ea-46a4-9246-a960e3a30dba"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "be3e6e6d-ad7f-40bc-8f28-a106165a8201",
+			"name": "Venta",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "bb08c62b-1fdb-43df-8e53-0bdbfeeab013",
+			"folder": null,
+			"order": [
+				"14f6eb03-f959-4a46-b3ea-0489caebfe27",
+				"d707d27f-9e15-4123-bf62-3330b159d0b2"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "0438d941-636b-4600-8009-edde4865b5bb",
+			"name": "http://localhost:8085/producto/1",
+			"url": "http://localhost:8085/producto/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+			"pathVariables": {}
+		},
+		{
+			"id": "0563c6aa-3076-4ba8-bd78-d544e44f6154",
+			"name": "http://localhost:8085/detalle/1",
+			"url": "http://localhost:8085/detalle/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "e41ecfd3-d2d5-4169-933b-876a6bf6fbc2",
+			"pathVariables": {}
+		},
+		{
+			"id": "14f6eb03-f959-4a46-b3ea-0489caebfe27",
+			"name": "http://localhost:8085/venta",
+			"url": "http://localhost:8085/venta",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "be3e6e6d-ad7f-40bc-8f28-a106165a8201",
+			"pathVariables": {}
+		},
+		{
+			"id": "4285b243-adff-4db4-ac59-389d515c7fef",
+			"name": "http://localhost:8085/detalle/new",
+			"url": "http://localhost:8085/detalle/new",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "e41ecfd3-d2d5-4169-933b-876a6bf6fbc2",
+			"rawModeData": "    {\r\n        \"idDetalle\": 0,\r\n        \"idVenta\": 1,\r\n        \"idProducto\": {\r\n            \"idProducto\": 1,\r\n            \"nombre\": \"Carro\",\r\n            \"precio\": \"3,500\"\r\n        }\r\n    }",
+			"pathVariables": {}
+		},
+		{
+			"id": "53a9cea5-5548-41a1-b85c-3bf933f6c0d1",
+			"name": "http://localhost:8085/producto/new",
+			"url": "http://localhost:8085/producto/new",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+			"rawModeData": "{\r\n    \"idProducto\":0,\r\n    \"nombre\":\"Carro\",\r\n    \"precio\":\"3,500\"\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "5bf5823c-de48-4a5f-a126-909c97611208",
+			"name": "localhost:8085/oauth/token?grant_type=password&username=appFront&password=1234",
+			"url": "localhost:8085/oauth/token?grant_type=password&username=appFront&password=1234",
+			"description": "",
+			"data": null,
+			"dataOptions": {
+				"raw": {
+					"language": "text"
+				}
+			},
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				},
+				{
+					"key": "username",
+					"value": "appFront",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "1234",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "1234"
+					},
+					{
+						"key": "username",
+						"value": "appFront"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "66817ac6-22df-4394-9e9f-0b11abe0129b",
+			"name": "http://localhost:8085/producto/3",
+			"url": "http://localhost:8085/producto/3",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+			"pathVariables": {}
+		},
+		{
+			"id": "7f41fe2c-16ea-46a4-9246-a960e3a30dba",
+			"name": "http://localhost:8085/producto",
+			"url": "http://localhost:8085/producto",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+			"pathVariables": {}
+		},
+		{
+			"id": "923cb823-a550-4812-8cc0-ee335cb49165",
+			"name": "http://localhost:8085/detalle",
+			"url": "http://localhost:8085/detalle",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "e41ecfd3-d2d5-4169-933b-876a6bf6fbc2",
+			"pathVariables": {}
+		},
+		{
+			"id": "9e3eb397-402f-47e6-8178-e3597546a460",
+			"name": "http://localhost:8085",
+			"url": "http://localhost:8085/",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhcHBGcm9udCIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDA2MjQ3MjUsIm5vbWJyZV91c3VhcmlvIjoiOiAgQVBJLUZyb250LUFQUCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiOWYwZDI2YzctZjcxYy00OTA0LTk0YjgtNWEzOGM1ZDMwMzcxIiwiY2xpZW50X2lkIjoiYXBwRnJvbnQiLCJJbmZvX3Rva2VuIjoiSG9sYSBxdWUgaGFjZSBkaWNlIGVsIHRva2VuIn0.K1fKxGzCuANuS-vo5oWx1tgVdS8UiCO1pQlQbxUowQcW1ATVWjoJdlbQhLgFPOuduoPhEzUcvlDf0gMf3vraY17FwD-gGIG-EgdUo-j7TnY-4KOhOUcZv0j7YVQ-VpIaa8GOjiif5Y9pUZrHkZzoA8FgNi0NGxKJrYp0nZtvIb5P6b7m7W0E0VX7SULie9Y4XhMgPxBbPoGeaUp5EAITcpArfXPMqKYGkXj9e_PHApz3-Oe0ek2FITfmb4WeTwKhQGjLoBiISPeUQvVJABMuWKBbtAPJKIKHgNdXoc8rwD4kafsoHOcWo-Ua8cQ67YVNk2ildsoYzmXL_X-U7wFGaA"
+					}
+				]
+			},
+			"events": null,
+			"folder": null,
+			"pathVariables": {}
+		},
+		{
+			"id": "c2c1dfcc-7fc9-46d7-832c-f1eaf93aa7ca",
+			"name": "http://localhost:8085/producto/3",
+			"url": "http://localhost:8085/producto/3",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "18e8d5e1-93a0-4f87-adf1-d2990a8b7e1b",
+			"rawModeData": "{\r\n    \"idProducto\":3,\r\n    \"nombre\":\"Avion\",\r\n    \"precio\":\"3,500\"\r\n}",
+			"pathVariables": {}
+		},
+		{
+			"id": "d707d27f-9e15-4123-bf62-3330b159d0b2",
+			"name": "http://localhost:8085/venta/new",
+			"url": "http://localhost:8085/venta/new",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "be3e6e6d-ad7f-40bc-8f28-a106165a8201",
+			"rawModeData": "{\r\n        \"idVenta\": 0,\r\n        \"idCliente\": {\r\n            \"idCliente\": 1,\r\n            \"nombre\": \"David\",\r\n            \"apellido\": \"Lara\",\r\n            \"dni\": \"123\",\r\n            \"telefono\": \"1234\",\r\n            \"email\": \"david@mail\"\r\n        },\r\n        \"fecha\": \"2020-09-19\",\r\n        \"detalles\": [ ]\r\n    }",
+			"pathVariables": {}
+		},
+		{
+			"id": "e6d7efca-8295-40ad-a8ca-b426a1c94308",
+			"name": "http://localhost:8085/cliente/1",
+			"url": "http://localhost:8085/cliente/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "94ada800-3370-484a-8326-6eea672a5be9",
+			"pathVariables": {}
+		},
+		{
+			"id": "ea04a93f-c97f-4dfd-90d5-692bc4ee1207",
+			"name": "http://localhost:8085/cliente/new",
+			"url": "http://localhost:8085/cliente/new",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "94ada800-3370-484a-8326-6eea672a5be9",
+			"rawModeData": "{\r\n    \"id_cliente\":0,\r\n    \"nombre\":\"David\",\r\n    \"apellido\":\"Lara\",\r\n    \"dni\":\"123\",\r\n    \"email\":\"david@mail\",\r\n    \"telefono\":\"1234\"\r\n}",
+			"pathVariables": {}
+		}
+	]
+}
