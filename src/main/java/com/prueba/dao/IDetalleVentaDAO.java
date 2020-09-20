@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.prueba.model.DetalleVenta;
 
 @Repository
-public interface IDetalleVentaDAO {
+public interface IDetalleVentaDAO extends JpaRepository<DetalleVenta, Long>{
 
 }

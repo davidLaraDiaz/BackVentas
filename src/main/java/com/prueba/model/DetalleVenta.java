@@ -2,6 +2,7 @@ package com.prueba.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,8 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-//@Entity
-//@Table(name = "detalleventa")
+@Entity
+@Table(name = "detalleventa")
 public class DetalleVenta implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -21,18 +22,14 @@ public class DetalleVenta implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "idDetalle")
 	private Long idDetalle;
+
+	private int idVenta;
 	
-	@Column(name = "idVenta")
-	@ManyToOne
-    @JoinColumn(name = "idVenta")
-	private Venta idVenta;
-	
-	@Column(name = "idProducto")
-	@ManyToOne
+	@ManyToOne( cascade = CascadeType.ALL )
     @JoinColumn(name = "idProducto")
 	private Producto idProducto;
 	
-	
+
 	
 	public DetalleVenta() {
 		// TODO Auto-generated constructor stub
@@ -40,15 +37,9 @@ public class DetalleVenta implements Serializable{
 
 
 
-
-
 	public Long getIdDetalle() {
 		return idDetalle;
 	}
-
-
-
-
 
 
 
@@ -59,20 +50,15 @@ public class DetalleVenta implements Serializable{
 
 
 
-
-
-
-	public Venta getIdVenta() {
-		return idVenta;
-	}
-
-
-
-	public void setIdVenta(Venta idVenta) {
+	public void setIdVenta(int idVenta) {
 		this.idVenta = idVenta;
 	}
+	
 
 
+	public int getIdVenta() {
+		return idVenta;
+	}
 
 
 
@@ -82,11 +68,12 @@ public class DetalleVenta implements Serializable{
 
 
 
-
-
 	public void setIdProducto(Producto idProducto) {
 		this.idProducto = idProducto;
 	}
+
+
+	
 
 
 

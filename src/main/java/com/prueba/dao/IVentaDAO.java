@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.prueba.model.Venta;
 
 @Repository
-public interface IVentaDAO {
+public interface IVentaDAO extends JpaRepository<Venta, Long>{
 
 }

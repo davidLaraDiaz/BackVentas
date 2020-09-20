@@ -2,6 +2,7 @@ package com.prueba.model;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -14,11 +15,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
-//@Entity
-//@Table(name = "venta")
+@Entity
+@Table(name = "venta")
 public class Venta implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -28,16 +27,15 @@ public class Venta implements Serializable{
 	@Column(name = "idVenta")
 	private Long idVenta;
 	
-	@Column(name = "idCliente")
-	@ManyToOne
-    @JoinColumn(name = "idCliente")
+	@JoinColumn(name = "idCliente")
+	@ManyToOne( cascade = CascadeType.ALL )
 	private Cliente idCliente;
 	
 	@Column(name = "fecha")
 	private Date fecha;
-	
-	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "idVenta")
-	//private List<DetalleVenta> detalles;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "idVenta")
+	private List<DetalleVenta> detalles;
 	
 	
 	public Venta() {
@@ -78,9 +76,36 @@ public class Venta implements Serializable{
 	}
 
 
+	public void addDetalle(DetalleVenta detalle) {
+		List<DetalleVenta> midetalle = this.getDetalles();
+		if (midetalle == null) {
+			midetalle = new ArrayList<>();
+		}
+		midetalle.add(detalle);
+	}
+	
+	public void deleteDetalle(DetalleVenta detalle) {
+		List<DetalleVenta> midetalle = this.getDetalles();
+		if(midetalle != null) {
+			for (DetalleVenta detalleVenta : midetalle) {
+				if (detalleVenta.getIdDetalle() == detalle.getIdDetalle()) {
+					midetalle.remove(detalleVenta);
+				}
+			}
+		}
+	}
+	
+	public List<DetalleVenta> getDetalles() {
+		return detalles;
+	}
 
 
 
+
+
+
+	
+	
 	
 	
 	

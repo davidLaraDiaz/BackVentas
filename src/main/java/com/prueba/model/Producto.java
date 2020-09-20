@@ -1,15 +1,12 @@
 package com.prueba.model;
 
 import java.io.Serializable;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -29,8 +26,6 @@ public class Producto implements Serializable{
 	@Column(name = "precio")
 	private String precio;
 	
-	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "idProducto")
-	//private List<DetalleVenta> detalles;
 	
 	
 	public Producto() {
@@ -75,6 +70,9 @@ public class Producto implements Serializable{
 	public void setPrecio(String precio) {
 		this.precio = precio;
 	}
+
+
+
 
 
 	

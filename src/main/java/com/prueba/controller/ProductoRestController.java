@@ -143,6 +143,7 @@ public class ProductoRestController {
 					.collect(Collectors.toList());
 			
 			response.put("mensaje", "Error en la base de datos");
+			response.put("Errores", errors);
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
 		}
 		
