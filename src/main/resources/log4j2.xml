@@ -7,6 +7,14 @@
         </Property>
     </Properties>
     <Appenders>
+	    <File name="MyFile" fileName="logs/app.log">
+	      <PatternLayout>
+	        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+	      </PatternLayout>
+	    </File>
+	    <Async name="Async">
+	      <AppenderRef ref="MyFile"/>
+	    </Async>
         <Console name="ConsoleAppender" target="SYSTEM_OUT" follow="true">
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
