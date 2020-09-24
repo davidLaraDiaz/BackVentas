@@ -11,12 +11,12 @@
 	<groupId>com.prueba</groupId>
 	<artifactId>DemoCurso</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>DemoCurso</name>
 	<description>prueba</description>
 
 	<properties>
-		<java.version>14</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
