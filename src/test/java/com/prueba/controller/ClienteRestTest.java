@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.prueba.model.Cliente;
 import com.prueba.service.ClienteService;
+import com.prueba.service.VentaService;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = ClienteRestController.class)
@@ -28,6 +29,9 @@ public class ClienteRestTest {
 
   @MockBean
   private ClienteService service;
+  
+  @MockBean
+  private VentaService serVenta;
   
   
   @Test

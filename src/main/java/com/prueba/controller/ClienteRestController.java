@@ -1,6 +1,8 @@
 package com.prueba.controller;
 
 import java.util.HashMap;
+import rx.Observable;
+import rx.Subscription;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -21,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.prueba.model.Cliente;
 import com.prueba.service.ClienteService;
+import com.prueba.service.VentaService;
 
 @RestController
 @RequestMapping()
@@ -29,10 +32,24 @@ public class ClienteRestController {
 	@Autowired
 	private ClienteService clienteService;
 	
+	@Autowired
+	private VentaService ventaService;
+	
 	@GetMapping("/")
 	public HttpStatus cliente() {
 		return  HttpStatus.OK ;
 	}
+	
+	@GetMapping("rx/cliente/{id}")
+	public Subscription rxGetCliente(@PathVariable Long id) {
+		return Observable.just(clienteService.findById(id)).subscribe();
+	}
+	
+	@GetMapping("rx/venta/{id}")
+	public Subscription rxGetVenta(@PathVariable Long id) {
+		return Observable.just(ventaService.findById(id)).subscribe();
+	}
+	
 	
 	@PostMapping("cliente/new")
 	@ResponseStatus(HttpStatus.CREATED)
